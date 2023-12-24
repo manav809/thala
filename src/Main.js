@@ -1,18 +1,25 @@
 import { Typography } from "@mui/material";
 import * as React from "react";
+import MagicNumbers from "./components/MagicNumbers";
+import MagicString from "./components/MagicString";
 
 const styles = {
+  center: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
   operations: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    margin: "5%",
+    margin: "3%",
   },
   string: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    margin: "10%",
+    margin: "3%",
   },
 };
 
@@ -22,8 +29,14 @@ export default function Main() {
       <div style={styles.operations}>
         <Typography variant="h6">Two Magical Numbers</Typography>
       </div>
+      <div style={styles.center}>
+        <MagicNumbers />
+      </div>
       <div style={styles.string}>
         <Typography variant="h6">Magical String</Typography>
+      </div>
+      <div style={styles.center}>
+        <MagicString />
       </div>
     </div>
   );
