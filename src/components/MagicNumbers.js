@@ -1,6 +1,7 @@
-import { TextField } from "@mui/material";
+import { IconButton, TextField } from "@mui/material";
 import { Select } from "@mui/material";
 import { MenuItem } from "@mui/material";
+import SportsCricketIcon from '@mui/icons-material/SportsCricket';
 const MagicNumbers = () => {
   return (
     <div style={{ display: "flex" }}>
@@ -27,6 +28,9 @@ const MagicNumbers = () => {
         size="small"
         sx={{ pl: 2 }}
       />
+      <IconButton sx={{pl: 2}}>
+          <SportsCricketIcon />
+      </IconButton>
     </div>
   );
 };

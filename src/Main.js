@@ -13,7 +13,7 @@ const styles = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    margin: "3%",
+    marginTop: "3%",
   },
   string: {
     display: "flex",

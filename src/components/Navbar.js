@@ -17,13 +17,13 @@ export default function MenuAppBar() {
             #Thala          
           </Typography>
           <div>
-            <IconButton size="small" color="inherit">
+            <IconButton size="medium" color="inherit">
               <DarkModeIcon />
             </IconButton>
-            <IconButton size="small" color="inherit">
+            <IconButton size="medium" color="inherit">
               <GitHubIcon />
             </IconButton>
-            <IconButton size="small" color="inherit">
+            <IconButton size="medium" color="inherit">
               <ShareIcon />
             </IconButton>
           </div>

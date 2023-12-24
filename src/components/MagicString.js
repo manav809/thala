@@ -1,4 +1,7 @@
 import { TextField } from "@mui/material";
+import { IconButton } from "@mui/material";
+import SportsCricketIcon from '@mui/icons-material/SportsCricket';
+
 const MagicString = () => {
   return (
     <div style={{ display: "flex" }}>
@@ -6,8 +9,10 @@ const MagicString = () => {
         id="outlined-size-small"
         defaultValue="Type here..."
         size="small"
-        sx={{ pr: 2 }}
       />
+      <IconButton sx={{ pl: 2 }}>
+        <SportsCricketIcon />
+      </IconButton>
     </div>
   );
 };
