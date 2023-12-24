@@ -1,9 +1,10 @@
-import Navbar from './components/Navbar'
-
+import Navbar from "./components/Navbar";
+import Main from "./Main";
 function App() {
   return (
     <div className="App">
-        <Navbar />  
+      <Navbar />
+      <Main />
     </div>
   );
 }
