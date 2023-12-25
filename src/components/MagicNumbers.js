@@ -4,7 +4,7 @@ import { MenuItem } from "@mui/material";
 import SportsCricketIcon from '@mui/icons-material/SportsCricket';
 const MagicNumbers = () => {
   return (
-    <div style={{ display: "flex" }}>
+    <div style={{ display: "flex", paddingTop: "20px" }}>
       <TextField
         id="outlined-size-small"
         defaultValue="Num 1"
