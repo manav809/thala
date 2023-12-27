@@ -9,7 +9,15 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import ShareIcon from "@mui/icons-material/Share";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import { Tooltip } from "@mui/material";
+import { Snackbar } from "@mui/material";
+import { useState } from "react";
 export default function MenuAppBar({ change, darkMode }) {
+  const [open, setOpen] = useState(false);
+
+  const handleClick = () => {
+    setOpen(true);
+    navigator.clipboard.writeText(window.location.toString());
+  };
   return (
     <Box>
       <AppBar position="static" color="inherit" enableColorOnDark>
@@ -29,14 +37,24 @@ export default function MenuAppBar({ change, darkMode }) {
               </IconButton>
             </Tooltip>
             <Tooltip title="github">
-              <IconButton size="medium" color="inherit" href="http://www.github.com/manav809/thala" >
+              <IconButton
+                size="medium"
+                color="inherit"
+                href="http://www.github.com/manav809/thala"
+              >
                 <GitHubIcon />
               </IconButton>
             </Tooltip>
             <Tooltip title="share">
-              <IconButton size="medium" color="inherit">
+              <IconButton size="medium" color="inherit" onClick={handleClick}>
                 <ShareIcon />
               </IconButton>
+              <Snackbar
+                open={open}
+                autoHideDuration={2000}
+                message="Copied to Clipboard!"
+                onClose={() => setOpen(false)}
+              />
             </Tooltip>
           </div>
         </Toolbar>
