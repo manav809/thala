@@ -41,6 +41,7 @@ export default function MenuAppBar({ change, darkMode }) {
                 size="medium"
                 color="inherit"
                 href="http://www.github.com/manav809/thala"
+                target="_blank"
               >
                 <GitHubIcon />
               </IconButton>
