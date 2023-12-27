@@ -7,8 +7,8 @@ import IconButton from '@mui/material/IconButton';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import ShareIcon from '@mui/icons-material/Share';
-
-export default function MenuAppBar() {
+import LightModeIcon from '@mui/icons-material/LightMode';
+export default function MenuAppBar({change, darkMode}) {
   return (
     <Box>
       <AppBar position="static" color="inherit" enableColorOnDark>
@@ -17,8 +17,8 @@ export default function MenuAppBar() {
             #Thala          
           </Typography>
           <div>
-            <IconButton size="medium" color="inherit">
-              <DarkModeIcon />
+            <IconButton size="medium" color="inherit" onClick={change} darkMode={darkMode}>
+              {darkMode ? <LightModeIcon /> : <DarkModeIcon />}
             </IconButton>
             <IconButton size="medium" color="inherit">
               <GitHubIcon />
