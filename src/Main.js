@@ -3,7 +3,7 @@ import * as React from "react";
 import ImageList from "./components/ImageList";
 import MagicNumbers from "./components/MagicNumbers";
 import MagicString from "./components/MagicString";
-
+import VolumeSlider from "./components/VolumeSlider"
 const styles = {
   center: {
     display: "flex",
@@ -41,6 +41,9 @@ export default function Main() {
       </div>
       <div style={styles.center}>
         <ImageList />
+      </div>
+      <div style={styles.center}>
+        <VolumeSlider />
       </div>
     </div>
   );
