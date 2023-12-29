@@ -1,5 +1,6 @@
 import { Typography } from "@mui/material";
 import * as React from "react";
+import ImageList from "./components/ImageList";
 import MagicNumbers from "./components/MagicNumbers";
 import MagicString from "./components/MagicString";
 
@@ -13,13 +14,13 @@ const styles = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    marginTop: "4%",
+    marginTop: "1%",
   },
   string: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    margin: "3%",
+    margin: "1%",
   },
 };
 
@@ -37,6 +38,9 @@ export default function Main() {
       </div>
       <div style={styles.center}>
         <MagicString />
+      </div>
+      <div style={styles.center}>
+        <ImageList />
       </div>
     </div>
   );
