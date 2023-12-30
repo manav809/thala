@@ -1,9 +1,11 @@
 import { TextField } from "@mui/material";
 import { IconButton } from "@mui/material";
 import SportsCricketIcon from "@mui/icons-material/SportsCricket";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AppContext } from "../Main";
 
 const MagicString = () => {
+  const { setSuccess } = useContext(AppContext);
   const [string, setString] = useState("");
 
   const handleChange = (event) => {

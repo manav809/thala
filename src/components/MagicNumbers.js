@@ -2,9 +2,11 @@ import { IconButton, TextField } from "@mui/material";
 import { Select } from "@mui/material";
 import { MenuItem } from "@mui/material";
 import SportsCricketIcon from "@mui/icons-material/SportsCricket";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AppContext } from "../Main";
 
 const MagicNumbers = () => {
+  const { setSuccess } = useContext(AppContext);
   const [num1, setNum1] = useState(0);
   const [num2, setNum2] = useState(0);
 
