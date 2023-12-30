@@ -23,7 +23,7 @@ export default function MenuAppBar({ change, darkMode }) {
       <AppBar position="static" color="inherit" enableColorOnDark>
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            #Thala
+            <strong>#ThalaForAReason</strong>
           </Typography>
           <div>
             <Tooltip title="color">

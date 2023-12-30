@@ -28,13 +28,13 @@ export default function Main() {
   return (
     <div>
       <div style={styles.operations}>
-        <Typography variant="h6">Two Magical Numbers</Typography>
+        <Typography variant="h6"><strong>Two Magical Numbers</strong></Typography>
       </div>
       <div style={styles.center}>
         <MagicNumbers />
       </div>
       <div style={styles.string}>
-        <Typography variant="h6">Magical String</Typography>
+        <Typography variant="h6"><strong>Magical String</strong></Typography>
       </div>
       <div style={styles.center}>
         <MagicString />
