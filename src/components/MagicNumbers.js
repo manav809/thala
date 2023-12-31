@@ -93,7 +93,7 @@ const MagicNumbers = () => {
           sx={{ pl: 2, width: 120 }}
           onChange={handleNum2Click}
         />
-        <IconButton type="submit">
+        <IconButton type="submit" disabled={num1 && num2 ? false : true}>
           <SportsCricketIcon />
         </IconButton>
       </form>
