@@ -5,7 +5,9 @@ import MagicNumbers from "./components/MagicNumbers";
 import MagicString from "./components/MagicString";
 import VolumeSlider from "./components/VolumeSlider";
 import Confetti from "react-confetti-boom";
+import { Snackbar } from "@mui/material";
 import { useState, createContext } from "react";
+
 const styles = {
   center: {
     display: "flex",
@@ -29,10 +31,11 @@ export const AppContext = createContext(null);
 
 export default function Main() {
   const [success, setSuccess] = useState(false);
+  const [open, setOpen] = useState(false);
 
   return (
     <div>
-      <AppContext.Provider value={{ success, setSuccess }}>
+      <AppContext.Provider value={{ success, setSuccess, setOpen }}>
         <div style={styles.operations}>
           <Typography variant="h6">
             <strong>Two Magical Numbers</strong>
@@ -68,6 +71,12 @@ export default function Main() {
             colors={["#ff577f", "#ff884b", "#ffd384", "#fff9b0", "#3498db"]}
           />
         ) : null}
+        <Snackbar
+          open={open}
+          autoHideDuration={2000}
+          message="Try Again!"
+          onClose={() => setOpen(false)}
+        />
       </AppContext.Provider>
     </div>
   );
