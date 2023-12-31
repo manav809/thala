@@ -15,7 +15,9 @@ const MagicString = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const regex = /[a-zA-Z0-9]/g; // only count letters and numbers
-    string.match(regex).length === 7 ? setSuccess(true) : setSuccess(false);
+    string.match(regex).length === 7 || string === "7"
+      ? setSuccess(true)
+      : setSuccess(false);
     setTimeout(() => {
       setSuccess(false);
     }, 7000);
@@ -30,7 +32,7 @@ const MagicString = () => {
           onChange={handleChange}
           sx={{ width: 175 }}
         />
-        <IconButton type="submit">
+        <IconButton type="submit" disabled={string === "" ? true : false}>
           <SportsCricketIcon />
         </IconButton>
       </form>
