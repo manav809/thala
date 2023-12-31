@@ -13,6 +13,7 @@ export default function Images() {
             src={`${item.img}?w=248&fit=crop&auto=format`}
             alt={item.title}
             loading="lazy"
+            style={{height: "1px"}}
           />
           <ImageListItemBar
             title={item.title}

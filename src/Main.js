@@ -28,7 +28,7 @@ const styles = {
 export const AppContext = createContext(null);
 
 export default function Main() {
-  const [success, setSuccess] = useState(false);
+  const [success, setSuccess] = useState(true);
 
   return (
     <div>

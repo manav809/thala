@@ -9,12 +9,18 @@ const MagicNumbers = () => {
   const { setSuccess } = useContext(AppContext);
   const [num1, setNum1] = useState(0);
   const [num2, setNum2] = useState(0);
+  const [select, setSelect] = useState(0);
 
   const handleNum1Click = (event) => {
     setNum1(event.target.value);
   };
   const handleNum2Click = (event) => {
     setNum2(event.target.value);
+  };
+
+  const handleSelect = (event) => {
+    setSelect(event.target.value)
+    console.log(event.target.value)
   };
 
   const handleSubmit = (event) => {
@@ -29,7 +35,7 @@ const MagicNumbers = () => {
           id="outlined-size-small"
           placeholder="Num 1"
           size="small"
-          sx={{ pr: 2, width: 120}}
+          sx={{ pr: 2, width: 120 }}
           onChange={handleNum1Click}
         />
         <Select
@@ -37,6 +43,7 @@ const MagicNumbers = () => {
           id="demo-select-extra-small"
           label="Op"
           size="small"
+          onChange={handleSelect}
         >
           <MenuItem value={10}>add</MenuItem>
           <MenuItem value={20}>sub</MenuItem>
