@@ -25,6 +25,7 @@ const MagicString = () => {
           placeholder="Type here..."
           size="small"
           onChange={handleChange}
+          sx={{width: 175}}
         />
         <IconButton type="submit">
           <SportsCricketIcon />

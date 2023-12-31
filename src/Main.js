@@ -16,13 +16,13 @@ const styles = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    marginTop: "1%",
+    marginTop: "0.5%",
   },
   string: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    margin: "1%",
+    margin: "0.5%",
   },
 };
 export const AppContext = createContext(null);

@@ -29,7 +29,7 @@ const MagicNumbers = () => {
           id="outlined-size-small"
           placeholder="Num 1"
           size="small"
-          sx={{ pr: 2 }}
+          sx={{ pr: 2, width: 120}}
           onChange={handleNum1Click}
         />
         <Select
@@ -47,7 +47,7 @@ const MagicNumbers = () => {
           id="outlined-size-small"
           placeholder="Num 2"
           size="small"
-          sx={{ pl: 2 }}
+          sx={{ pl: 2, width: 120 }}
           onChange={handleNum2Click}
         />
         <IconButton type="submit">
