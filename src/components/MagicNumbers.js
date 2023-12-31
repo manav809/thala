@@ -10,7 +10,7 @@ const MagicNumbers = () => {
   const [num1, setNum1] = useState(0);
   const [num2, setNum2] = useState(0);
   const [select, setSelect] = useState(10);
-  const [total, setTotal] = useState(10);
+
   const handleNum1Click = (event) => {
     setNum1(event.target.value);
   };
@@ -27,48 +27,32 @@ const MagicNumbers = () => {
     switch (select) {
       case 10:
         const val1 = Number(num1) + Number(num2);
-        setTotal(val1);
-        if (val1 === 7) {
-          setSuccess(true);
-        } else {
-          setOpen(true);
-        }
+        val1 === 7 ? setSuccess(true) : setOpen(true);
+
         setTimeout(() => {
           setSuccess(false);
         }, 7000);
         break;
       case 20:
         const val2 = Number(num1) - Number(num2);
-        setTotal(val2);
-        if (val2 === 7) {
-          setSuccess(true);
-        } else {
-          setOpen(true);
-        }
+        val2 === 7 ? setSuccess(true) : setOpen(true);
+
         setTimeout(() => {
           setSuccess(false);
         }, 7000);
         break;
       case 30:
         const val3 = Number(num1) * Number(num2);
-        setTotal(val3);
-        if (val3 === 7) {
-          setSuccess(true);
-        } else {
-          setOpen(true);
-        }
+        val3 === 7 ? setSuccess(true) : setOpen(true);
+
         setTimeout(() => {
           setSuccess(false);
         }, 7000);
         break;
       case 40:
         const val4 = Number(num1) / Number(num2);
-        setTotal(val4);
-        if (val4 === 7) {
-          setSuccess(true);
-        } else {
-          setOpen(true);
-        }
+        val4 === 7 ? setSuccess(true) : setOpen(true);
+
         setTimeout(() => {
           setSuccess(false);
         }, 7000);

@@ -6,6 +6,7 @@ import MagicString from "./components/MagicString";
 import VolumeSlider from "./components/VolumeSlider";
 import Confetti from "react-confetti-boom";
 import { Snackbar } from "@mui/material";
+import { Alert } from "@mui/material";
 import { useState, createContext } from "react";
 
 const styles = {
@@ -74,9 +75,10 @@ export default function Main() {
         <Snackbar
           open={open}
           autoHideDuration={2000}
-          message="Try Again!"
           onClose={() => setOpen(false)}
-        />
+        >
+          <Alert severity="error">Please Try Again!!!</Alert>
+        </Snackbar>
       </AppContext.Provider>
     </div>
   );

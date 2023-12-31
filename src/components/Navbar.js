@@ -10,6 +10,7 @@ import ShareIcon from "@mui/icons-material/Share";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import { Tooltip } from "@mui/material";
 import { Snackbar } from "@mui/material";
+import { Alert } from "@mui/material";
 import { useState } from "react";
 export default function MenuAppBar({ change, darkMode }) {
   const [open, setOpen] = useState(false);
@@ -53,9 +54,10 @@ export default function MenuAppBar({ change, darkMode }) {
               <Snackbar
                 open={open}
                 autoHideDuration={2000}
-                message="Copied to Clipboard!"
                 onClose={() => setOpen(false)}
-              />
+              >
+                <Alert severity="info">Copied to Clipboard!!!</Alert>
+              </Snackbar>
             </Tooltip>
           </div>
         </Toolbar>

@@ -5,7 +5,7 @@ import { useContext, useState } from "react";
 import { AppContext } from "../Main";
 
 const MagicString = () => {
-  const { setSuccess } = useContext(AppContext);
+  const { setSuccess, setOpen } = useContext(AppContext);
   const [string, setString] = useState("");
 
   const handleChange = (event) => {
@@ -17,7 +17,7 @@ const MagicString = () => {
     const regex = /[a-zA-Z0-9]/g; // only count letters and numbers
     string.match(regex).length === 7 || string === "7"
       ? setSuccess(true)
-      : setSuccess(false);
+      : setOpen(true);
     setTimeout(() => {
       setSuccess(false);
     }, 7000);
