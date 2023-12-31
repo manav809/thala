@@ -15,7 +15,10 @@ const MagicString = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const regex = /[a-zA-Z0-9]/g; // only count letters and numbers
-    console.log(string.match(regex).length); // prints 13 to the console
+    string.match(regex).length === 7 ? setSuccess(true) : setSuccess(false);
+    setTimeout(() => {
+      setSuccess(false);
+    }, 7000);
   };
   return (
     <div style={{ display: "flex" }}>
@@ -25,7 +28,7 @@ const MagicString = () => {
           placeholder="Type here..."
           size="small"
           onChange={handleChange}
-          sx={{width: 175}}
+          sx={{ width: 175 }}
         />
         <IconButton type="submit">
           <SportsCricketIcon />
