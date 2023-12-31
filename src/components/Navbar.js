@@ -26,7 +26,7 @@ export default function MenuAppBar({ change, darkMode }) {
             <strong>#ThalaForAReason</strong>
           </Typography>
           <div>
-            <Tooltip title="color">
+            <Tooltip title="mode">
               <IconButton
                 size="medium"
                 color="inherit"
