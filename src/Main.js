@@ -8,7 +8,8 @@ import Confetti from "react-confetti-boom";
 import { Snackbar } from "@mui/material";
 import { Alert } from "@mui/material";
 import { useState, createContext } from "react";
-
+import useSound from "use-sound";
+import Song from "./assets/song.mp3";
 const styles = {
   center: {
     display: "flex",
@@ -33,7 +34,7 @@ export const AppContext = createContext(null);
 export default function Main() {
   const [success, setSuccess] = useState(false);
   const [open, setOpen] = useState(false);
-
+  const [play] = useSound(Song);
   return (
     <div>
       <AppContext.Provider value={{ success, setSuccess, setOpen }}>
@@ -72,6 +73,7 @@ export default function Main() {
             colors={["#ff577f", "#ff884b", "#ffd384", "#fff9b0", "#3498db"]}
           />
         ) : null}
+        {success ? play() : null}
         <Snackbar
           open={open}
           autoHideDuration={2000}
