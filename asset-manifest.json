@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.js": "/thala/static/js/main.901263d1.js",
+    "static/js/845.75822f26.chunk.js": "/thala/static/js/845.75822f26.chunk.js",
+    "static/media/song.mp3": "/thala/static/media/song.ecd52390ab1618ba3998.mp3",
+    "index.html": "/thala/index.html",
+    "main.901263d1.js.map": "/thala/static/js/main.901263d1.js.map",
+    "845.75822f26.chunk.js.map": "/thala/static/js/845.75822f26.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.901263d1.js"
+  ]
+}
